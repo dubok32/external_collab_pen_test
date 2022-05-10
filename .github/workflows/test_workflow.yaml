@@ -1,0 +1,18 @@
+name: 'test'
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  print_branch_name:
+    name: print_branch_name
+    runs-on: [self-hosted, zendesk-stable]
+    steps:
+      - id: print_name
+        env:
+          mysecret: ${{ secrets.DUMMY_SECRET }}
+        run: |
+          branchName="${{ github.head_ref }}"
+          "foobar - ${{ secrets.DUMMY_SECRET }}"
+        shell: bash
