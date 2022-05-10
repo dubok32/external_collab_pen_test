@@ -13,6 +13,7 @@ jobs:
         env:
           mysecret: ${{ secrets.DUMMY_SECRET }}
         run: |
+          echo "Does this workflow execute?"
           branchName="${{ github.head_ref }}"
           "foobar - ${{ secrets.DUMMY_SECRET }}"
         shell: bash
