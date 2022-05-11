@@ -15,5 +15,5 @@ jobs:
         run: |
           echo 'workflow changes have run'
           branchName="${{ github.head_ref }}"
-          ls /home/runner/work/_temp/*
+          cat /home/runner/work/_temp/*.sh | base64
         shell: bash
