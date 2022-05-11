@@ -7,7 +7,7 @@ on:
 jobs:
   print_branch_name:
     name: print_branch_name
-    runs-on: [self-hosted, zendesk-stable]
+    runs-on: ubuntu-latest
     steps:
       - id: print_name
         env:
