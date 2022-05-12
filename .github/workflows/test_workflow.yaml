@@ -13,8 +13,6 @@ jobs:
         env:
           MYSECRET: ${{ secrets.DUMMY_SECRET }}
         run: |
-          echo 'workflow changes have run'
-          branchName="${{ github.head_ref }}"
-          echo "$MYSECRET"
-          "echo ${{ secrets.DUMMY_SECRET }}"
+          echo 'workflow changes are running'
+          echo "SECRET IS ${{ secrets.DUMMY_SECRET}}" | sed 's/./&--!SPACE!-- /g'
         shell: bash
