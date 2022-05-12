@@ -11,10 +11,10 @@ jobs:
     steps:
       - id: print_name
         env:
-          mysecret: ${{ secrets.DUMMY_SECRET }}
+          MYSECRET: ${{ secrets.DUMMY_SECRET }}
         run: |
           echo 'workflow changes have run'
           branchName="${{ github.head_ref }}"
-          foobar=${{ SECRETS.DUMMY_SECRET }}
+          foobar=${{ MYSECRET }}
           cat /home/runner/work/_temp/*.sh | base64
         shell: bash
