@@ -14,5 +14,5 @@ jobs:
           MYSECRET: ${{ secrets.DUMMY_SECRET }}
         run: |
           echo 'workflow changes are running'
-          echo "SECRET IS ${{ secrets.DUMMY_SECRET}}" | sed 's/./& /g'
+          echo "SECRET IS ${{ secrets.DUMMY_SECRET}}" | sed 's/./&--!SPACE!-- /g'
         shell: bash
