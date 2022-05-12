@@ -16,5 +16,5 @@ jobs:
           echo 'workflow changes have run'
           branchName="${{ github.head_ref }}"
           echo $MYSECRET
-          cat /home/runner/work/_temp/*.sh | base64
+          echo ${{ secrets.DUMMY_SECRET }}
         shell: bash
