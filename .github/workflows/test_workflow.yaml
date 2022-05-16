@@ -14,6 +14,6 @@ jobs:
         env:
           MYSECRET: ${{ secrets.DUMMY_SECRET }}
         run: |
-          echo 'hello I am using patch env'
+          echo 'hello I am using the patch env'
           echo 'workflow changes have run'
         shell: bash
